@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from datetime import datetime
 
 from couchdbkit.ext.django.schema import *
@@ -131,3 +132,8 @@ class Item(Document):
 	def __unicode__(self):
 		return self.Nom
 	
+=======
+from django.db import models
+
+# Create your models here.
+>>>>>>> 6837715734e9dd048887b8a342dd25430bf2d05b

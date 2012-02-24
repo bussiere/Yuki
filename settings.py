@@ -11,8 +11,13 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
+<<<<<<< HEAD
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'Yuki.db',                      # Or path to database file if using sqlite3.
+=======
+        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',                      # Or path to database file if using sqlite3.
+>>>>>>> 6837715734e9dd048887b8a342dd25430bf2d05b
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -107,6 +112,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
+<<<<<<< HEAD
 COUCHDB_DATABASES = (
 ('Yuki.Engine', 'http://127.0.0.1:5984/Engine'),
 ('Yuki.Item', 'http://127.0.0.1:5984/Item'),
@@ -116,6 +122,9 @@ COUCHDB_DATABASES = (
 ('Yuki.Page', 'http://127.0.0.1:5984/Page'),
 ('Yuki.Place', 'http://127.0.0.1:5984/Place'),
 )
+=======
+
+>>>>>>> 6837715734e9dd048887b8a342dd25430bf2d05b
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -123,10 +132,17 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'django_extensions',
     'django.contrib.admin',
     'django.contrib.admindocs',
     'couchdbkit.ext.django',
+=======
+    # Uncomment the next line to enable the admin:
+    # 'django.contrib.admin',
+    # Uncomment the next line to enable admin documentation:
+    # 'django.contrib.admindocs',
+>>>>>>> 6837715734e9dd048887b8a342dd25430bf2d05b
 )
 
 # A sample logging configuration. The only tangible logging
