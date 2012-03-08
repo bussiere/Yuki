@@ -9,6 +9,13 @@
 ## be redirected to HTTPS, uncomment the line below:
 # request.requires_https()
 
+db = DAL("sqlite://storage.sqlite")
+
+db.define_table('image',
+   Field('title', unique=True),
+   Field('file', 'upload'),
+   format = '%(title)s')
+
 if not request.env.web2py_runtime_gae:
     ## if NOT running on Google App Engine use SQLite or other DB
     db = DAL('sqlite://storage.sqlite')
@@ -78,4 +85,3 @@ use_janrain(auth,filename='private/janrain.key')
 ## >>> rows=db(db.mytable.myfield=='value').select(db.mytable.ALL)
 ## >>> for row in rows: print row.id, row.myfield
 #########################################################################
-

@@ -12,8 +12,18 @@ db = DAL("sqlite://storage.sqlite")
 
 db.define_table('Convention',
    Field('Nom', unique=True),
+   Field('Localisation','list:reference Localisation'),
    Field('User','list:reference User'),
    Field('Comment','list:reference Comment'),
+   Field('Seller','list:reference Seller'),
+   Field('Livre','list:reference Livre'),
+   Field('Musique','list:reference Musique'),
+   Field('Video','list:reference Video'),
+   Field('Figur','list:reference Figur'),
+   Field('Goodie','list:reference Goodie'),
+   Field('Link','list:reference Link'),
+   Field('Tag','list:reference Tag'),
+
    format = '%(Nom)s')
 db.image.title.requires = IS_NOT_IN_DB(db, db.Barcode.Barcode)
 db.comment.image_id.requires = IS_IN_DB(db, db.Barcode.id, '%(Nom)s')
@@ -88,4 +98,3 @@ use_janrain(auth,filename='private/janrain.key')
 ## >>> rows=db(db.mytable.myfield=='value').select(db.mytable.ALL)
 ## >>> for row in rows: print row.id, row.myfield
 #########################################################################
-

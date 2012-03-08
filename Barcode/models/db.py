@@ -13,8 +13,16 @@ db = DAL("sqlite://storage.sqlite")
 
 db.define_table('Barcode',
    Field('Barcode', unique=True),
-   Field('user','list:reference User'),
-   format = '%(title)s')
+   Field('User','list:reference User'),
+   Field('Comment','list:reference Comment'),
+   Field('Seller','list:reference Seller'),
+   Field('Livre','list:reference Livre'),
+   Field('Musique','list:reference Musique'),
+   Field('Video','list:reference Video'),
+   Field('Figur','list:reference Figur'),
+   Field('Goodie','list:reference Goodie'),
+   Field('VideoGame','list:reference VideoGame'),
+   format = '%(Barcodee)s')
 db.image.title.requires = IS_NOT_IN_DB(db, db.Barcode.Barcode)
 db.comment.image_id.requires = IS_IN_DB(db, db.Barcode.id, '%(title)s')
 

@@ -9,6 +9,21 @@
 ## be redirected to HTTPS, uncomment the line below:
 # request.requires_https()
 
+db.define_table('FamilleTag',
+   Field('Name', unique=True),
+   Field('Tag','list:reference Tag'),
+   format = '%(Name)s')
+   
+db.define_table('Tag',
+   Field('Name', unique=True),
+   format = '%(Name)s')
+   
+db.define_table('AssoTag',
+   Field('Name', unique=True),
+   Field('Tag','list:reference Tag'),
+   Field('FamilleTag','list:reference FamilleTag'),
+   format = '%(Name)s')
+
 if not request.env.web2py_runtime_gae:
     ## if NOT running on Google App Engine use SQLite or other DB
     db = DAL('sqlite://storage.sqlite')
@@ -78,4 +93,3 @@ use_janrain(auth,filename='private/janrain.key')
 ## >>> rows=db(db.mytable.myfield=='value').select(db.mytable.ALL)
 ## >>> for row in rows: print row.id, row.myfield
 #########################################################################
-

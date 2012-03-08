@@ -9,6 +9,114 @@
 ## be redirected to HTTPS, uncomment the line below:
 # request.requires_https()
 
+
+db.define_table('GPS',
+   Field('GPS', unique=True),
+   Field('Tag','list:reference Tag'),
+   format = '%(GPS)s')
+
+db.define_table('GeoHash',
+   Field('GeoHash', unique=True),
+   Field('Tag','list:reference Tag'),
+   format = '%(GeoHash)s')
+
+db.define_table('OpenStreetMap',
+   Field('OpenStreetMap', unique=True),
+   Field('Tag','list:reference Tag'),
+   format = '%(OpenStreetMap)s')
+
+db.define_table('Country',
+   Field('Name', unique=True),
+   Field('Link','list:reference Link'),
+   Field('GPS','list:reference GPS'),
+   Field('GeoHash','list:reference GeoHash'),
+   Field('OpenStreetMap','list:reference OpenStreetMap'),
+   format = '%(Name)s')
+   
+db.define_table('State',
+   Field('Name', unique=True),
+   Field('Link','list:reference Link'),
+   Field('GPS','list:reference GPS'),
+   Field('GeoHash','list:reference GeoHash'),
+   Field('OpenStreetMap','list:reference OpenStreetMap'),
+   format = '%(Name)s')
+   
+
+db.define_table('Region',
+   Field('Name', unique=True),
+   Field('Link','list:reference Link'),
+   Field('GPS','list:reference GPS'),
+   Field('GeoHash','list:reference GeoHash'),
+   Field('OpenStreetMap','list:reference OpenStreetMap'),
+   format = '%(Name)s')
+   
+ 
+db.define_table('City',
+   Field('Name', unique=True),
+   Field('Link','list:reference Link'),
+   Field('GPS','list:reference GPS'),
+   Field('GeoHash','list:reference GeoHash'),
+   Field('OpenStreetMap','list:reference OpenStreetMap'),
+   format = '%(Name)s')
+
+db.define_table('Adress',
+   Field('Name', unique=True),
+   Field('Number', unique=True),
+   Field('Link','list:reference Link'),
+   Field('GPS','list:reference GPS'),
+   Field('GeoHash','list:reference GeoHash'),
+   Field('OpenStreetMap','list:reference OpenStreetMap'),
+   format = '%(Name)s')
+   
+db.define_table('PostalCode',
+   Field('Name', unique=True),
+   Field('Number', unique=True),
+   Field('Link','list:reference Link'),
+   Field('GPS','list:reference GPS'),
+   Field('GeoHash','list:reference GeoHash'),
+   Field('OpenStreetMap','list:reference OpenStreetMap'),
+   format = '%(Name)s')
+   
+db.define_table('Subway',
+   Field('Name', unique=True),
+   Field('Number', unique=True),
+   format = '%(Name)s')
+  
+
+db.define_table('SubwayStation',
+   Field('Name', unique=True),
+   Field('Subway','list:reference Subway'),
+   format = '%(Name)s')
+
+
+db.define_table('Bus',
+   Field('Name', unique=True),
+   Field('Number', unique=True),
+   format = '%(Name)s')
+  
+
+db.define_table('BusStation',
+   Field('Name', unique=True),
+   Field('Subway','list:reference Subway'),
+   format = '%(Name)s')
+
+db.define_table('Localisation',
+   Field('Name', unique=True),
+   Field('Link','list:reference Link'),
+   Field('GPS','list:reference GPS'),
+   Field('GeoHash','list:reference GeoHash'),
+   Field('OpenStreetMap','list:reference OpenStreetMap'),
+   Field('Country','list:reference Country'),
+   Field('State','list:reference State'),
+   Field('Region','list:reference Region'),
+   Field('City','list:reference City'),
+   Field('Adress','list:reference Adress'),
+   Field('PostalCode','list:reference PostalCode'),
+   Field('SubwayStation','list:reference SubwayStation'),
+   Field('BusStation','list:reference BusStation'),
+   format = '%(Name)s')
+   
+   
 if not request.env.web2py_runtime_gae:
     ## if NOT running on Google App Engine use SQLite or other DB
     db = DAL('sqlite://storage.sqlite')
@@ -78,4 +186,3 @@ use_janrain(auth,filename='private/janrain.key')
 ## >>> rows=db(db.mytable.myfield=='value').select(db.mytable.ALL)
 ## >>> for row in rows: print row.id, row.myfield
 #########################################################################
-

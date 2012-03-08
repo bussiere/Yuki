@@ -9,6 +9,129 @@
 ## be redirected to HTTPS, uncomment the line below:
 # request.requires_https()
 
+db.define_table('Author',
+   Field('Nom', unique=True),
+   Field('Tag','list:reference Tag'),
+   format = '%(Nom)s')
+
+db.define_table('Character',
+   Field('Nom', unique=True),
+   Field('Tag','list:reference Tag'),
+   format = '%(Nom)s')
+
+db.define_table('Figur',
+   Field('Name', unique=True),
+   Field('Date'),
+   Field('Characters','list:reference Character'),
+   Field('Authors','list:reference Author'),
+   Field('Tag','list:reference Tag'),
+   Field('Price','list:reference Price'),
+   Field('Seller','list:reference Seller'),
+   Field('Convention','list:reference Convention'),
+   Field('Vote','list:reference Vote'),
+   Field('BarCode','list:reference BarCode'),
+   Field('Comment','list:reference Comment'),
+   Field('Link','list:reference Link'),
+   format = '%(Nom)s')
+   
+db.define_table('TypeMusic',
+   Field('Nom', unique=True),
+   format = '%(Nom)s')
+
+
+db.define_table('Music',
+   Field('Name', unique=True),
+   Field('Date'),
+   Field('Authors','list:reference Author'),
+   Field('Tag','list:reference Tag'),
+   Field('Price','list:reference Price'),
+   Field('Seller','list:reference Seller'),
+   Field('Convention','list:reference Convention'),
+   Field('Vote','list:reference Vote'),
+   Field('BarCode','list:reference BarCode'),
+   Field('Comment','list:reference Comment'),
+   Field('Link','list:reference Link'),
+   format = '%(Nom)s')
+
+
+db.define_table('TypeVideo',
+   Field('Nom', unique=True),
+   format = '%(Nom)s')
+
+
+db.define_table('Video',
+   Field('Name', unique=True),
+   Field('Date'),
+   Field('Authors','list:reference Author'),
+   Field('Tag','list:reference Tag'),
+   Field('Price','list:reference Price'),
+   Field('Seller','list:reference Seller'),
+   Field('Convention','list:reference Convention'),
+   Field('Vote','list:reference Vote'),
+   Field('BarCode','list:reference BarCode'),
+   Field('Comment','list:reference Comment'),
+   Field('Link','list:reference Link'),  
+   format = '%(Nom)s')
+
+db.define_table('TypeVideoGame',
+   Field('Nom', unique=True),
+   format = '%(Nom)s')
+
+
+db.define_table('VideoGame',
+   Field('Name', unique=True),
+   Field('Date'),
+   Field('Authors','list:reference Author'),
+   Field('Tag','list:reference Tag'),
+   Field('Price','list:reference Price'),
+   Field('Seller','list:reference Seller'),
+   Field('Convention','list:reference Convention'),
+   Field('Vote','list:reference Vote'),
+   Field('BarCode','list:reference BarCode'),
+   Field('Comment','list:reference Comment'),
+   Field('Link','list:reference Link'),
+   format = '%(Nom)s')
+
+db.define_table('TypeBook',
+   Field('Nom', unique=True),
+   format = '%(Nom)s')
+
+
+db.define_table('Book',
+   Field('Name', unique=True),
+   Field('Date'),
+   Field('Authors','list:reference Author'),
+   Field('Tag','list:reference Tag'),
+   Field('Price','list:reference Price'),
+   Field('Seller','list:reference Seller'),
+   Field('Convention','list:reference Convention'),
+   Field('Vote','list:reference Vote'),
+   Field('BarCode','list:reference BarCode'),
+   Field('Comment','list:reference Comment'),
+   Field('Link','list:reference Link'),
+   format = '%(Nom)s')
+
+
+db.define_table('TypeGoodie',
+   Field('Nom', unique=True),
+   format = '%(Nom)s')
+
+
+db.define_table('Goodie',
+   Field('Name', unique=True),
+   Field('Date'),
+   Field('Authors','list:reference Author'),
+   Field('Tag','list:reference Tag'),
+   Field('Price','list:reference Price'),
+   Field('Seller','list:reference Seller'),
+   Field('Convention','list:reference Convention'),
+   Field('Vote','list:reference Vote'),
+   Field('BarCode','list:reference BarCode'),
+   Field('Comment','list:reference Comment'),
+   Field('Link','list:reference Link'),
+   format = '%(Nom)s')
+
+
 if not request.env.web2py_runtime_gae:
     ## if NOT running on Google App Engine use SQLite or other DB
     db = DAL('sqlite://storage.sqlite')
@@ -78,4 +201,3 @@ use_janrain(auth,filename='private/janrain.key')
 ## >>> rows=db(db.mytable.myfield=='value').select(db.mytable.ALL)
 ## >>> for row in rows: print row.id, row.myfield
 #########################################################################
-
