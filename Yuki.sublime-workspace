@@ -1,0 +1,458 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "# Django settings for Yuki project.\n\nDEBUG = True\nTEMPLATE_DEBUG = DEBUG\n\nADMINS = (\n    # ('Your Name', 'your_email@example.com'),\n)\n\nMANAGERS = ADMINS\n\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.\n        'NAME': 'Yuki.db',                      # Or path to database file if using sqlite3.\n        'USER': '',                      # Not used with sqlite3.\n        'PASSWORD': '',                  # Not used with sqlite3.\n        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.\n        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.\n    }\n}\n\n# Local time zone for this installation. Choices can be found here:\n# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name\n# although not all choices may be available on all operating systems.\n# On Unix systems, a value of None will cause Django to use the same\n# timezone as the operating system.\n# If running in a Windows environment this must be set to the same as your\n# system time zone.\nTIME_ZONE = 'America/Chicago'\n\n# Language code for this installation. All choices can be found here:\n# http://www.i18nguy.com/unicode/language-identifiers.html\nLANGUAGE_CODE = 'en-us'\n\nSITE_ID = 1\n\n# If you set this to False, Django will make some optimizations so as not\n# to load the internationalization machinery.\nUSE_I18N = True\n\n# If you set this to False, Django will not format dates, numbers and\n# calendars according to the current locale\nUSE_L10N = True\n\n# Absolute filesystem path to the directory that will hold user-uploaded files.\n# Example: \"/home/media/media.lawrence.com/media/\"\nMEDIA_ROOT = ''\n\n# URL that handles the media served from MEDIA_ROOT. Make sure to use a\n# trailing slash.\n# Examples: \"http://media.lawrence.com/media/\", \"http://example.com/media/\"\nMEDIA_URL = ''\n\n# Absolute path to the directory static files should be collected to.\n# Don't put anything in this directory yourself; store your static files\n# in apps' \"static/\" subdirectories and in STATICFILES_DIRS.\n# Example: \"/home/media/media.lawrence.com/static/\"\nSTATIC_ROOT = ''\n\n# URL prefix for static files.\n# Example: \"http://media.lawrence.com/static/\"\nSTATIC_URL = '/static/'\n\n# URL prefix for admin static files -- CSS, JavaScript and images.\n# Make sure to use a trailing slash.\n# Examples: \"http://foo.com/static/admin/\", \"/static/admin/\".\nADMIN_MEDIA_PREFIX = '/static/admin/'\n\n# Additional locations of static files\nSTATICFILES_DIRS = (\n    # Put strings here, like \"/home/html/static\" or \"C:/www/django/static\".\n    # Always use forward slashes, even on Windows.\n    # Don't forget to use absolute paths, not relative paths.\n)\n\n# List of finder classes that know how to find static files in\n# various locations.\nSTATICFILES_FINDERS = (\n    'django.contrib.staticfiles.finders.FileSystemFinder',\n    'django.contrib.staticfiles.finders.AppDirectoriesFinder',\n#    'django.contrib.staticfiles.finders.DefaultStorageFinder',\n)\n\n# Make this unique, and don't share it with anybody.\nSECRET_KEY = '&^7cazk4whge@12uqwq2^qe3haax0*l*f^*qj0cvy(s-mgmg@h'\n\n# List of callables that know how to import templates from various sources.\nTEMPLATE_LOADERS = (\n    'django.template.loaders.filesystem.Loader',\n    'django.template.loaders.app_directories.Loader',\n#     'django.template.loaders.eggs.Loader',\n)\n\nMIDDLEWARE_CLASSES = (\n    'django.middleware.common.CommonMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n)\n\nROOT_URLCONF = 'Yuki.urls'\n\nTEMPLATE_DIRS = (\n    # Put strings here, like \"/home/html/django_templates\" or \"C:/www/django/templates\".\n    # Always use forward slashes, even on Windows.\n    # Don't forget to use absolute paths, not relative paths.\n)\nCOUCHDB_DATABASES = (\n('Yuki.Engine', 'http://127.0.0.1:5984/Engine'),\n('Yuki.Item', 'http://127.0.0.1:5984/Item'),\n('Yuki.Link', 'http://127.0.0.1:5984/Link'),\n('Yuki.Localisation', 'http://127.0.0.1:5984/Localisation'),\n('Yuki.Member', 'http://127.0.0.1:5984/Member'),\n('Yuki.Page', 'http://127.0.0.1:5984/Page'),\n('Yuki.Picture', 'http://127.0.0.1:5984/Page'),\n('Yuki.Place', 'http://127.0.0.1:5984/Place'),\n)\nINSTALLED_APPS = (\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.sites',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'django_extensions',\n    'django.contrib.admin',\n    'django.contrib.admindocs',\n    'couchdbkit.ext.django',\n)\n\n# A sample logging configuration. The only tangible logging\n# performed by this configuration is to send an email to\n# the site admins on every HTTP 500 error.\n# See http://docs.djangoproject.com/en/dev/topics/logging for\n# more details on how to customize your logging configuration.\nLOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,\n    'handlers': {\n        'mail_admins': {\n            'level': 'ERROR',\n            'class': 'django.utils.log.AdminEmailHandler'\n        }\n    },\n    'loggers': {\n        'django.request': {\n            'handlers': ['mail_admins'],\n            'level': 'ERROR',\n            'propagate': True,\n        },\n    }\n}\n",
+			"file": "settings.py",
+			"file_size": 5343,
+			"file_write_time": 129745775137500000,
+			"settings":
+			{
+				"buffer_size": 5391,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Page/models.py",
+			"settings":
+			{
+				"buffer_size": 1361,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Member/models.py",
+			"settings":
+			{
+				"buffer_size": 533,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "tag/models.py",
+			"settings":
+			{
+				"buffer_size": 497,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "from datetime import datetime\n\nfrom couchdbkit.ext.django.schema import *\n\n# Create your models here.\n\nclass VoteHK(Document):\n	Creation = DateTimeProperty(default=datetime.utcnow)\n	Member_Member = ListProperty()\n	def ___str__(self):\n		return self.Nom\n	def __unicode__(self):\n		return self.Nom\n\nclass VoteNonHK(Document):\n	Creation = DateTimeProperty(default=datetime.utcnow)\n	Member_Member = ListProperty()\n	def ___str__(self):\n		return self.Nom\n	def __unicode__(self):\n		return self.Nom\n\nclass Vote(Document):\n	Creation = DateTimeProperty(default=datetime.utcnow)\n	VoteHK_VoteHK = ListProperty()\n	VoteNonHK_VoteNonHK = ListProperty()\n	Count = IntegerProperty()\n	def ___str__(self):\n		return self.Nom\n	def __unicode__(self):\n		return self.Nom\n	",
+			"file": "Vote/models.py",
+			"file_size": 721,
+			"file_write_time": 129745748182343750,
+			"settings":
+			{
+				"buffer_size": 745,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Engine/models.py",
+			"settings":
+			{
+				"buffer_size": 595,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Item/models.py",
+			"settings":
+			{
+				"buffer_size": 3514,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Seller/models.py",
+			"settings":
+			{
+				"buffer_size": 603,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "from datetime import datetime\n\nfrom couchdbkit.ext.django.schema import *\n\n# Create your models here.\nclass NomsEndroit(Document):\n	Nom= StringProperty()\n\nclass Pays(Document):\n    Nom_NomsEndroit = ListProperty()\n\n    \n    GPS= StringProperty()\n\n    GeoHash= StringProperty()\n\n    \n    GoogleMaps_lien_Lien= ListProperty()\n\n    \n    Liens_lien_Lien= ListProperty()\n\nclass Etat(Document):\n	Nom_NomsEndroit = ListProperty()\n\n	GPS= StringProperty()\n\n	GeoHash= StringProperty()\n\n	GoogleMaps_lien_Lien= ListProperty()\n\n	Liens_lien_Lien= ListProperty()\n\nclass Region(Document):\n	Nom_NomsEndroit\n= ListProperty()\n\n	GPS= StringProperty()\n\n	GeoHash= StringProperty()\n\n	GoogleMaps_lien_Lien= ListProperty()\n\n	Liens_lien_Lien= ListProperty()\n\nclass Ville(Document):\n	Nom_NomsEndroit\n= ListProperty()\n\n	GPS= StringProperty()\n\n	GeoHash= StringProperty()\n\n	GoogleMaps_lien_Lien= ListProperty()\n\n	Liens_lien_Lien= ListProperty()\n\nclass Adresse(Document):\n	Numero= IntegerProperty()\n\n	Nom_NomsEndroit = ListProperty()\n\n	GPS= StringProperty()\n\n	GeoHash= StringProperty()\n\n	GoogleMaps_lien_Lien= ListProperty()\n\n	Liens_lien_Lien= ListProperty()\n\nclass Localisation(Document):\n	GPS= StringProperty()\n\n	GeoHash= StringProperty()\n\n	GoogleMaps_lien_Lien= ListProperty()\n\n	Liens_lien_Lien= ListProperty()\n\n	Adresse_Adresse= ListProperty()\n\n	ville_Ville= ListProperty()\n\n	region_Region = ListProperty()\n\n	etat_Etat = ListProperty()\n\n	pays_pays = ListProperty()\n\n	Tags_tag_Tag= ListProperty()\n\nclass Admin:\n\n    pass\n",
+			"file": "localisation/models.py",
+			"file_size": 1590,
+			"file_write_time": 129745768333437500,
+			"settings":
+			{
+				"buffer_size": 1493,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "settings.py",
+					"settings":
+					{
+						"buffer_size": 5391,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4389,
+								4375
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1392.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Page/models.py",
+					"settings":
+					{
+						"buffer_size": 1361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1237,
+								1211
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 144.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Member/models.py",
+					"settings":
+					{
+						"buffer_size": 533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								423,
+								423
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "tag/models.py",
+					"settings":
+					{
+						"buffer_size": 497,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								108,
+								111
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Vote/models.py",
+					"settings":
+					{
+						"buffer_size": 745,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								565,
+								565
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Engine/models.py",
+					"settings":
+					{
+						"buffer_size": 595,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								516,
+								516
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Item/models.py",
+					"settings":
+					{
+						"buffer_size": 3514,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3010,
+								3010
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1392.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Seller/models.py",
+					"settings":
+					{
+						"buffer_size": 603,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								492,
+								492
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "localisation/models.py",
+					"settings":
+					{
+						"buffer_size": 1493,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1135,
+								1147
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 816.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 358.0,
+	"status_bar_visible": true
+}
