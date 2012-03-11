@@ -1,0 +1,147 @@
+(dp1
+S'OpenStreetMap'
+p2
+(dp3
+S'type'
+p4
+S'list:reference OpenStreetMap'
+p5
+sS'sortable'
+p6
+I6
+sS'sql'
+p7
+S'TEXT'
+p8
+ssS'City'
+p9
+(dp10
+g4
+S'list:reference City'
+p11
+sg6
+I10
+sg7
+g8
+ssS'Name'
+p12
+(dp13
+g4
+S'string'
+p14
+sg6
+I2
+sg7
+S'CHAR(512) UNIQUE'
+p15
+ssS'SubwayStation'
+p16
+(dp17
+g4
+S'list:reference SubwayStation'
+p18
+sg6
+I13
+sg7
+g8
+ssS'Country'
+p19
+(dp20
+g4
+S'list:reference Country'
+p21
+sg6
+I7
+sg7
+g8
+ssS'Region'
+p22
+(dp23
+g4
+S'list:reference Region'
+p24
+sg6
+I9
+sg7
+g8
+ssS'BusStation'
+p25
+(dp26
+g4
+S'list:reference BusStation'
+p27
+sg6
+I14
+sg7
+g8
+ssS'State'
+p28
+(dp29
+g4
+S'list:reference State'
+p30
+sg6
+I8
+sg7
+g8
+ssS'GeoHash'
+p31
+(dp32
+g4
+S'list:reference GeoHash'
+p33
+sg6
+I5
+sg7
+g8
+ssS'PostalCode'
+p34
+(dp35
+g4
+S'list:reference PostalCode'
+p36
+sg6
+I12
+sg7
+g8
+ssS'Link'
+p37
+(dp38
+g4
+S'list:reference Link'
+p39
+sg6
+I3
+sg7
+g8
+ssS'Adress'
+p40
+(dp41
+g4
+S'list:reference Adress'
+p42
+sg6
+I11
+sg7
+g8
+ssS'id'
+p43
+(dp44
+g4
+g43
+sg6
+I1
+sg7
+S'INTEGER PRIMARY KEY AUTOINCREMENT'
+p45
+ssS'GPS'
+p46
+(dp47
+g4
+S'list:reference GPS'
+p48
+sg6
+I4
+sg7
+g8
+ss.
