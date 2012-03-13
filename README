@@ -1,4 +1,5 @@
-Projet YUKI
+This Project is under GPLv3
+Projet YUKI 
 Yuki est un projet de base de données collaborative des produits dérivés de l’animation japonaise, qui a pour but de répondre à la question : est-ce de la contrefaçon hongkongaise, ou un produit officiel ? 
 Les codes-barre des produits seront rassemblés dans une base de données. Il sera possible de télécharger un petit client mobile qui permettra de scanner un code barre en convention ou en magasin, afin de savoir très rapidement si c’est un produit « légal »ou une contrefaçon.
 Trois types de membres pourront agir sur la base de données :
