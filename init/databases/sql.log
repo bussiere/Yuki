@@ -450,3 +450,12 @@ timestamp: 2012-03-11T18:04:15.114000
 ALTER TABLE comment ADD barcode_id INTEGER REFERENCES Barcode(id) ON DELETE CASCADE;
 timestamp: 2012-03-11T18:04:15.123000
 ALTER TABLE comment ADD author INTEGER REFERENCES auth_user(id) ON DELETE CASCADE;
+timestamp: 2012-03-13T05:43:46.236000
+CREATE TABLE Barcodebase(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Barcode CHAR(512),
+    auth_user INTEGER REFERENCES auth_user(id) ON DELETE CASCADE,
+    Comment CHAR(512),
+    Hk CHAR(1)
+);
+success!

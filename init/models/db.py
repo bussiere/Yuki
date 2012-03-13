@@ -47,6 +47,13 @@ crud, service, plugins = Crud(db), Service(), PluginManager()
 auth.define_tables()
 
 
+db.define_table('Barcodebase',
+   Field('Barcode'),
+   Field('auth_user',db.auth_user),
+   Field('Comment'),
+   Field('Hk','boolean'),
+   format = '%(Barcodee)s')
+
 db.define_table('Barcode',
    Field('Barcode', unique=True),
    Field('auth_user','list:reference auth_user'),
