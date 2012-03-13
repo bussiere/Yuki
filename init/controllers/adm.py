@@ -113,8 +113,9 @@ def query_by_table_type(tablename,db,request=request):
 # ###########################################################
 
 
+
 def index():
-    return dict(databases=databases)
+    return dict(databases=[db.Barcode.id])
 
 
 # ##########################################################

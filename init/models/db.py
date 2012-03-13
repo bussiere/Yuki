@@ -374,6 +374,10 @@ db.define_table('VoteAskHK',
    Field('auth_user', db.auth_user),
    format = '%(auth_user)s')
 
+db.define_table('comment',
+   Field('Barcode_id', db.Barcode),
+   Field('author', db.auth_user),
+   Field('body', 'text'))
 
 ## configure email
 mail=auth.settings.mailer

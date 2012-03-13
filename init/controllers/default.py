@@ -33,6 +33,31 @@ def user():
     """
     return dict(form=auth())
 
+def SearchBarcode():
+    image = db.Barcode(request.args(0)) or redirect(URL('index'))
+    db.comment.Barcode_id.default = Barcode.id
+    form = crud.create(db.comment,
+                       message='your comment is posted',
+            next=URL(args=Barcode.id))
+    comments = db(db.comment.Barcode_id==Barcode.id).select()
+    return dict(image=image, comments=comments, form=form)
+
+
+def showBarcode():
+    image = db.Barcode(request.args(0)) or redirect(URL('index'))
+    db.comment.Barcode_id.default = Barcode.id
+    form = crud.create(db.comment,
+                       message='your comment is posted',
+            next=URL(args=Barcode.id))
+    comments = db(db.comment.Barcode_id==Barcode.id).select()
+    return dict(image=image, comments=comments, form=form)
+
+def addBarcode():
+    form = SQLFORM(db.Barcode)
+    if form.accepts(request.vars, session):
+        response.flash = T('new record inserted')
+    return dict(form=form,table=db.Barcode)
+
 
 def download():
     """
