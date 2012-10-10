@@ -131,6 +131,7 @@ INSTALLED_APPS = (
     'object',
     'seller',
     'users',
+    'bootstrap_toolkit',
     'south',
 )
 
