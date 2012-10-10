@@ -1,4 +1,6 @@
 from django.contrib import admin
-from object.models import CategoryObject,Object
-admin.site.register(CategoryObject)
+from object.models import Tag,CategorieObject,ImageObject,Object
+admin.site.register(Tag)
+admin.site.register(CategorieObject)
+admin.site.register(ImageObject)
 admin.site.register(Object)
