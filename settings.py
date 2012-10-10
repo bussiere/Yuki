@@ -1,5 +1,7 @@
-# Django settings for Yuki project.
+# Django settings for Jackpoint project.
+import dj_database_url
 import os
+#DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -9,7 +11,9 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
+DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+f bool(os.environ.get('LOCAL_DEV', False)):
+    DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'yuki.db',                      # Or path to database file if using sqlite3.
