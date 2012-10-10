@@ -2,7 +2,7 @@ from django.db import models
 
 
 
-class CategorySeller(models.Model):
+class CategorieSeller(models.Model):
     Nom = models.CharField(max_length=200,null=True,blank=True)
     def ___str__(self):
         return self.Nom
@@ -11,7 +11,7 @@ class CategorySeller(models.Model):
 
 # Create your models here.
 class Seller(models.Model):
-	CategorySeller = models.ForeignKey('CategorieObject',null=True,blank=True)
+    CategorySeller = models.ForeignKey('CategorieSeller',null=True,blank=True)
     Nom = models.CharField(max_length=200,null=True,blank=True)
     Adresse = models.CharField(max_length=200,null=True,blank=True)
     Email =  models.EmailField(null=True,blank=True)
