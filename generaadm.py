@@ -24,8 +24,13 @@ for models in liste :
             temp =  temp.split("(")[0]
             classes.append(temp)
     print classes
-    app = models.split("/")[-2:][0]
+    if models.find("\\") :
+        app = models.split("\\")[-2:][0]
+    else :
+        app = models.split("/")[-2:][0]
+
     folder =  models.replace("/models.py","")
+    folder =  models.replace("\\models.py","")
     f.close()
 
     importa = ""

@@ -7,9 +7,9 @@ class Avis(models.Model):
 	UNKNOWN = 'Unknown' 
 	NONHK = 'Non Hk'
 	NOTEHK = (
-    (-1, 'Hk'),
-    (0, 'Unknown'),
-    (1, 'Non Hk'),)
+    (-1, HK),
+    (0, UNKNOWN),
+    (1, NOTEHK),)
 	Rank = models.IntegerField(choices=NOTEHK,default=UNKNOWN)
     User = .ManyToManyField('users.User',null=True,blank=True)
     Note_divers = models.ManyToManyField('users.Note',null=True,blank=True)
