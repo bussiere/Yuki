@@ -23,3 +23,16 @@ class ItemForm(forms.Form):
 	Vendeur = forms.CharField(label="Vendeur")
 	Image = forms.ImageField(label="Image")
 	DemandeAvis = forms.BooleanField(label="Demander un avis")
+
+
+
+class AvisForm(forms.Form):
+	HK = 'HK'
+    	UNKNOWN = 'Unknown' 
+    	NONHK = 'Non Hk'
+   	NOTEHK = (
+    	(-1, HK),
+    	(0, UNKNOWN),
+    	(1, NONHK),)
+	Avis =  forms.ChoiceField(choices=NOTEHK,label="Avis")
+	Note = forms.CharField(label="Note")

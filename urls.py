@@ -8,6 +8,8 @@ urlpatterns = patterns('',
 
     url(r'additem', 'xserver.views.additem', name='additem'),
 
+     url(r'searchitem', 'xserver.views.searchitem', name='searchitem'),
+
     # # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
