@@ -7,7 +7,7 @@ from django import forms
 
 
 class LoginForm(forms.Form):
-	Email =  forms.EmailField(label="Email", widget=forms.PasswordInput)
+	Email =  forms.EmailField(label="Email")
 	Password = forms.CharField(label="Password", widget=forms.PasswordInput)
 
 class BarcodeForm(forms.Form):
@@ -15,3 +15,11 @@ class BarcodeForm(forms.Form):
 
 class VendeurForm(forms.Form):
 	Nom = forms.CharField(label="Nom")
+
+class ItemForm(forms.Form):
+	Barcode = forms.CharField(label="Barcode")
+	Nom =  forms.CharField(label="Nom")
+	Description = forms.CharField(label="Description")
+	Vendeur = forms.CharField(label="Vendeur")
+	Image = forms.ImageField(label="Image")
+	DemandeAvis = forms.BooleanField(label="Demander un avis")
