@@ -5,7 +5,7 @@ admin.autodiscover()
 include('engine.views')
 urlpatterns = patterns('',
     # # Examples:
-    url(r'^$', 'engine.views.index', name='home'),
+    url(r'^$', 'xserver.views.index', name='home'),
 
     # # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
