@@ -27,7 +27,7 @@ def  searchitem(request):
     truc = 'toto'
     loginform = LoginForm()
     avisform = AvisForm()
-    result = ""
+    result = None
     if request.method == 'POST': # If the form has been submitted...
         form = BarcodeForm(request.POST) # A form bound to the POST data
         if form.is_valid(): 

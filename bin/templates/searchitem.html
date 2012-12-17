@@ -12,7 +12,15 @@ Se logguer :<br>
 {% csrf_token %}
 {{ loginform }}<br>
 <br>
+{% if result %}
 {{ result }}
+{% for item in result %}
+
+{{ item.Object.Nom }}
+{{ item.Object.Tag}}
+{% endfor %}
+
+{% endif %}
 
 {% csrf_token %}
 Rajouter un avis :<br>

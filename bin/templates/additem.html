@@ -11,8 +11,13 @@ Se logguer :<br>
 {% csrf_token %}
 {{ loginform }}<br>
 <br>
+<form action="../../searchitem/" method="post">
+{% csrf_token %}
 Rajouter un item :<br>
 {{ itemform }}<br>
+<input type="submit" value="Submit">
+</form>
+
 <br>
 
 </body>
