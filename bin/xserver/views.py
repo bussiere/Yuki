@@ -5,6 +5,7 @@ from django.template import Context, Template
 from django.shortcuts import render, RequestContext, render_to_response
 from django.http import HttpResponse 
 from form.models import LoginForm,VendeurForm,BarcodeForm,ItemForm,AvisForm
+from engine.models import Item
 
 def index(request):
     truc = 'toto'
@@ -31,6 +32,7 @@ def  searchitem(request):
         form = BarcodeForm(request.POST) # A form bound to the POST data
         if form.is_valid(): 
             barcode = form.cleaned_data['Barcode']
+            barcode = Item.objects.filter(Barcode__BarCode__contains=barcode)
             result = barcode
     rendered = render_to_response('searchitem.html', {'result':result,'truc': truc,'loginform': loginform,'avisform':avisform},context_instance=RequestContext(request))
     return  rendered
