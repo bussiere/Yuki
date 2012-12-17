@@ -19,6 +19,18 @@ def additem(request):
     truc = 'toto'
     loginform = LoginForm()
     itemform = ItemForm()
+    if request.method == 'POST': # If the form has been submitted...
+        form = ItemForm(request.POST) # A form bound to the POST data
+        if form.is_valid(): 
+            barcode = form.cleaned_data['Barcode']
+            nom = form.cleaned_data['Nom']
+            description = form.cleaned_data['Description']
+            tag = form.cleaned_data['Tag']
+            vendeur = form.cleaned_data['Vendeur']
+            image = form.cleaned_data['Image']
+            demandeavis = form.cleaned_data['DemandeAvis']
+            #barcode = Item.objects.filter(Barcode__BarCode__contains=barcode)
+            result = barcode
     rendered = render_to_response('additem.html', {'truc': truc,'loginform': loginform,'itemform':itemform},context_instance=RequestContext(request))
     return  rendered
 

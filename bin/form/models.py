@@ -20,6 +20,7 @@ class ItemForm(forms.Form):
 	Barcode = forms.CharField(label="Barcode")
 	Nom =  forms.CharField(label="Nom")
 	Description = forms.CharField(label="Description")
+	Tag = forms.CharField(label="Vendeur")
 	Vendeur = forms.CharField(label="Vendeur")
 	Image = forms.ImageField(label="Image")
 	DemandeAvis = forms.BooleanField(label="Demander un avis")
