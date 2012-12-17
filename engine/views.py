@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Create your views here.
 from django_quicky import view
 from django_quicky import routing
@@ -18,3 +19,5 @@ def index(request):
 def index(request):
     truc = 'titi'
     return {'truc': truc}
+=======
+>>>>>>> ad3df59ba1c150421d00ab334f44874069194291

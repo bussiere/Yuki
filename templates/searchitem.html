@@ -8,33 +8,13 @@
 <script src="http://yandex.st/dojo/1.8.0/dojo/dojo.js"></script>
 <body>
 Se logguer :<br>
-<form>
-	{% csrf_token %}
+{% csrf_token %}
 {{ loginform }}<br>
-<input type="submit">
-</form>
-Rechercher un Code barre :<br>
-<form action="/searchitem/" method="post">
-	{% csrf_token %}
-{{ barcodeform }}<br>
 <br>
-<input type="submit" value="Submit">
-</form>
-Rechercher un vendeur : <br>
-<form>
-	{% csrf_token %}
-{{ vendeurform }}<br>
+{% csrf_token %}
+Rajouter un avis :<br>
+{{ avisform }}<br>
 <br>
-<input type="submit">
-</form>
 
-
-
-
-<a href="../../additem/">Rajoutez un item</a><br>
-
-
-
-Avis demandés : <br>
 </body>
 </html>
