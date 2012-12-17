@@ -67,7 +67,7 @@
 			"file": "settings.py",
 			"settings":
 			{
-				"buffer_size": 5167,
+				"buffer_size": 5465,
 				"line_ending": "Windows"
 			}
 		},
@@ -88,18 +88,29 @@
 			}
 		},
 		{
+			"contents": "# Create your views here.\nfrom django_quicky import view\nfrom django_quicky import routing\n \n\nurls, urlpatterns = routing()\n\nurlpatterns.add_admin('/admin/')\n\n@url(r'^$')\n@view(render_to='index.html')\ndef index(request):\n    truc = 'toto'\n    return {'truc': truc}\n\n\n@view(render_to='index.html')\ndef index(request):\n    truc = 'titi'\n    return {'truc': truc}",
 			"file": "engine/views.py",
+			"file_size": 379,
+			"file_write_time": 129945131024062500,
 			"settings":
 			{
-				"buffer_size": 152,
+				"buffer_size": 360,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Documents/GitHub/Wikiboulot/boulot/documentation.html",
+			"settings":
+			{
+				"buffer_size": 394869,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "template/index.html",
 			"settings":
 			{
-				"buffer_size": 33,
+				"buffer_size": 0,
 				"line_ending": "Windows"
 			}
 		},
@@ -144,6 +155,7 @@
 	},
 	"file_history":
 	[
+		"/C/Documents and Settings/Micro/Bureau/savappdebian.ldif",
 		"/D/Documents/GitHub/PersoStats/index.html",
 		"/C/AtelierSODA/workspaceSODA/madrhas/test.txt",
 		"/D/Documents/test.txt",
@@ -254,6 +266,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"jar",
 			"	",
 			"300",
 			"application",
@@ -309,7 +322,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 10,
 			"sheets":
 			[
 				{
@@ -481,15 +494,15 @@
 					"file": "settings.py",
 					"settings":
 					{
-						"buffer_size": 5167,
+						"buffer_size": 5465,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3722,
-								3722
+								3982,
+								3982
 							]
 						],
 						"settings":
@@ -499,7 +512,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1661.0,
+						"translation.y": 1949.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -544,8 +557,8 @@
 						"selection":
 						[
 							[
-								219,
-								219
+								198,
+								193
 							]
 						],
 						"settings":
@@ -563,15 +576,15 @@
 					"file": "engine/views.py",
 					"settings":
 					{
-						"buffer_size": 152,
+						"buffer_size": 360,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								98,
-								98
+								157,
+								157
 							]
 						],
 						"settings":
@@ -586,18 +599,45 @@
 				},
 				{
 					"buffer": 10,
-					"file": "template/index.html",
+					"file": "/D/Documents/GitHub/Wikiboulot/boulot/documentation.html",
 					"settings":
 					{
-						"buffer_size": 33,
+						"buffer_size": 394869,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18,
-								18
+								301948,
+								301948
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 8037.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "template/index.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -611,7 +651,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "engine/models.py",
 					"settings":
 					{
@@ -637,7 +677,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "users/admin.py",
 					"settings":
 					{
