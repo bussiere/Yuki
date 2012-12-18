@@ -8,23 +8,23 @@
 <script src="http://yandex.st/dojo/1.8.0/dojo/dojo.js"></script>
 <body>
 
-Se logguer :<br>
-{% csrf_token %}
-{{ loginform }}<br>
-<br>
+{% include "login.html" %}
 {% if result %}
 {{ result }}
 {% for item in result %}
 
 {{ item.Object.Nom }}
 {{ item.Object.Tag}}
+<form action="/addavis/" method="post">
+{% csrf_token %}
+Rajouter un avis :<br>
+{{ avisform }}<br>
+<input type="hidden" name="id" value="item.id">
+</form>
 {% endfor %}
 
 {% endif %}
 
-{% csrf_token %}
-Rajouter un avis :<br>
-{{ avisform }}<br>
 <br>
 
 </body>

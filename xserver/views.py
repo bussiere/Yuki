@@ -29,7 +29,11 @@ def additem(request):
             vendeur = form.cleaned_data['Vendeur']
             image = form.cleaned_data['Image']
             demandeavis = form.cleaned_data['DemandeAvis']
-            #barcode = Item.objects.filter(Barcode__BarCode__contains=barcode)
+            items = Item.objects.filter(Barcode__BarCode__contains=barcode)
+            if (items) :
+                for item in items :
+                    if item.Nom == nom :
+                        pass
             result = barcode
     rendered = render_to_response('additem.html', {'truc': truc,'loginform': loginform,'itemform':itemform},context_instance=RequestContext(request))
     return  rendered

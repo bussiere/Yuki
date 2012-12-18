@@ -7,11 +7,9 @@
 </head>
 <script src="http://yandex.st/dojo/1.8.0/dojo/dojo.js"></script>
 <body>
-Se logguer :<br>
-{% csrf_token %}
-{{ loginform }}<br>
+{% include "login.html" %}
 <br>
-<form action="../../searchitem/" method="post">
+<form action="../../additem/" method="post">
 {% csrf_token %}
 Rajouter un item :<br>
 {{ itemform }}<br>

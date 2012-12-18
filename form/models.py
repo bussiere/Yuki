@@ -2,7 +2,7 @@ from django.db import models
 from django.shortcuts import render_to_response
 from django.forms import ModelForm
 from django import forms
-
+from object.models import CategorieObject
 
 
 
@@ -17,10 +17,11 @@ class VendeurForm(forms.Form):
 	Nom = forms.CharField(label="Nom")
 
 class ItemForm(forms.Form):
+	Type = forms.ModelChoiceField(queryset=CategorieObject.objects.all(), empty_label=None)
 	Barcode = forms.CharField(label="Barcode")
 	Nom =  forms.CharField(label="Nom")
 	Description = forms.CharField(label="Description")
-	Tag = forms.CharField(label="Vendeur")
+	Tag = forms.CharField(label="Tag")
 	Vendeur = forms.CharField(label="Vendeur")
 	Image = forms.ImageField(label="Image")
 	DemandeAvis = forms.BooleanField(label="Demander un avis")

@@ -7,12 +7,7 @@
 </head>
 <script src="http://yandex.st/dojo/1.8.0/dojo/dojo.js"></script>
 <body>
-Se logguer :<br>
-<form>
-	{% csrf_token %}
-{{ loginform }}<br>
-<input type="submit">
-</form>
+{% include "login.html" %}
 Rechercher un Code barre :<br>
 <form action="/searchitem/" method="post">
 	{% csrf_token %}
