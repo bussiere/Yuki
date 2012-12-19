@@ -6,7 +6,8 @@ from django.shortcuts import render, RequestContext, render_to_response
 from django.http import HttpResponse 
 from form.models import LoginForm,VendeurForm,BarcodeForm,ItemForm,AvisForm
 from engine.models import Item
-
+from barcode.model import Barcode
+from object.model import Object
 def index(request):
     truc = 'toto'
     loginform = LoginForm()
@@ -30,19 +31,18 @@ def additem(request):
             image = form.cleaned_data['Image']
             demandeavis = form.cleaned_data['DemandeAvis']
             items = Item.objects.filter(Barcode__BarCode__contains=barcode)
+            result = barcode
+            rendered = render_to_response('additem.html', {'truc': truc,'loginform': loginform,'itemform':itemform},context_instance=RequestContext(request))
             if (items) :
                 for item in items :
                     if item.Nom == nom :
                         rendered = render_to_response('additem.html', {'truc': truc,'loginform': loginform,'itemform':itemform},context_instance=RequestContext(request))
+                rendered = render_to_response('additemexist.html', {'truc': truc,'loginform': loginform,'itemform':itemform,'items':item},context_instance=RequestContext(request))
             tag = tag.split(" ")
             # on recherche le code barre
             barcodeobject = Barcode.objects.filter(BarCode__exact=barcode)
             if not barcode :
                 barcodeobject = Barcode.create(BarCode=barcode)
-            # on recherche un item avec le meme nom
-            itemobject = Barcode.objects.filter(BarCode__exact=barcode)
-            result = barcode
-    rendered = render_to_response('additem.html', {'truc': truc,'loginform': loginform,'itemform':itemform},context_instance=RequestContext(request))
     return  rendered
 
 
