@@ -33,7 +33,14 @@ def additem(request):
             if (items) :
                 for item in items :
                     if item.Nom == nom :
-                        pass
+                        rendered = render_to_response('additem.html', {'truc': truc,'loginform': loginform,'itemform':itemform},context_instance=RequestContext(request))
+            tag = tag.split(" ")
+            # on recherche le code barre
+            barcodeobject = Barcode.objects.filter(BarCode__exact=barcode)
+            if not barcode :
+                barcodeobject = Barcode.create(BarCode=barcode)
+            # on recherche un item avec le meme nom
+            itemobject = Barcode.objects.filter(BarCode__exact=barcode)
             result = barcode
     rendered = render_to_response('additem.html', {'truc': truc,'loginform': loginform,'itemform':itemform},context_instance=RequestContext(request))
     return  rendered
